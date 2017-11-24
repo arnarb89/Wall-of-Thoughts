@@ -1,0 +1,98 @@
+$accent-color: salmon;
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  overflow-y: scroll;
+}
+
+body {
+  padding: 20px;
+  font: 1.4rem "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+header {
+  display: flex;
+  .left {flex: 4;}
+  .right {
+    flex: 1;
+    img {width:100%;}
+  }
+}
+
+main{ 
+  padding: 20px; border: 0px solid; 
+}
+
+a{
+  color: $accent-color;
+}
+
+.xss-holder {
+  background-color: white;
+  color: black;
+  height: 100px;
+  width: 100%;
+}
+
+
+
+.notDisplayed{
+  display: none;
+}
+
+.myBold{
+  font-weight: bold;
+}
+
+.evenDepth{
+ background-color: hsl(0, 0%, 95%);
+}
+
+.oddDepth{
+  background-color: hsl(0, 0%, 100%)
+}
+
+.thePosts2{
+  width:100%;
+  text-align: left;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 1px #888888;
+  padding: 12px;
+  padding-left:10px;
+  padding-right:10px;
+  border-radius: 5px;
+  margin: 0px;
+  line-height:1.3em;
+}
+
+.middleAligned{
+  text-align: center;
+}
+
+.fullWidth{
+  width:100%;
+}
+
+.postText{
+  width:100%;
+  word-wrap: break-word;
+}
+
+.LoginRegisterWidth{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 5em;
+}
+
+.SubmitWidth{
+  margin: 0 auto;
+}
+
+#postContainer2{
+  max-width:1000px;
+  margin: 0 auto;
+}

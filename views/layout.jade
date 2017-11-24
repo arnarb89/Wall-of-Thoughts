@@ -1,0 +1,44 @@
+doctype html
+html(lang="is")
+  head
+    title= title
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet")
+    link(rel='stylesheet' href='/dist/stylesheets/styles.css')
+    link(rel="stylesheet" type='text/css' href='https://fonts.googleapis.com/css?family=Shadows+Into+Light')
+    //<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width" initial-scale="1")
+  body
+    div.fullWidth
+      //if (session && session.user)
+        span.pull-right
+          //a(href='/profile/'+session.user.username+'')=session.user.username
+          span= session.user.username
+          //b= session.user.username
+          b   
+          b |
+          b   
+          a(href='/logout') Logout
+    div
+      h1.middleAligned.fullWidth
+        a(href='/thewall') Wall of Thoughts
+      br
+    //header  
+      //.left
+        h1
+          a(href='/thewall') The Wall
+        br
+        ul.list-inline
+          //li: a(href='/').btn Forsíða
+          if (session && session.user)
+            //li: a(href='/thewall').btn Veggurinn       
+      //.right
+        //img(src='/images/drone.png')
+        //swag
+        //swag2
+        //swag3
+      
+    main
+      block content
+    
+  script(src="/javascripts/frontend.js")

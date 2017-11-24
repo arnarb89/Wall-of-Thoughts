@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  div.LoginRegisterWidth
+    div.middleAligned
+      span= session.user.username  
+      b  | 
+      a(href='/logout') Logout
+    br
+    br
+    fieldset.form-group
+      //label(for="textarea") Write on the wall.
+      textarea(id="text" type="textarea" name="text" placeholder="What would you like to say?" rows="3").form-control
+    input(type="submit" id="mainbutton").form-control
+  div.notDisplayed
+    form(method="post")
+      fieldset.form-group
+        div(id="theUserName")= session.user.username
+        div(id="theUserId")= theId.id
+        input(id="hiddendepth" type="text" name="hiddendepth")
+        input(id="hiddenparent" type="text" name="hiddenparent")
+        textarea(id="hiddentext" type="textarea" name="hiddentext" placeholder="Texti").form-control
+      input(type="submit" id="hiddensender").form-control
+  if (results)
+    p
+    br
+    br
+    div.fullWidth
+      div(id="postContainer2")
+    //hr
+    //hr
+    //hr
+    //hr
+    div(id="postContainer1")
+      each u in results.rows
+        div.thePosts
+          p= u.id
+          p= u.theusername
+          p= u.text
+          p= u.date
+          p= u.parent
+          p= u.depth
+          hr
+  script(src="/javascripts/thewallFrontEnd.js")
+    
+  
+
